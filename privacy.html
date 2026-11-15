@@ -30,12 +30,15 @@
 <h2>How it is used</h2>
 <p>Data is used only to show and manage the developer's own bookkeeping. Pennywise does not use the data for advertising, profiling, or any purpose unrelated to that bookkeeping.</p>
 
+<h2>Human review of every change</h2>
+<p>Pennywise never changes QuickBooks data on its own. Every change goes through review first, whether the developer started it or AI suggested it. Changes include creating, updating, or deleting records and processing payments. Pennywise shows each change to the developer, and nothing is sent until the developer approves that specific change. Pennywise has no automatic or unattended writes.</p>
+
 <h2 id="ai">AI processing</h2>
 <p>Pennywise uses a generative AI model, <b>Anthropic's Claude</b>, accessed through the Claude API, to help with bookkeeping tasks. These tasks include categorizing transactions, summarizing accounting data, and answering questions about the developer's own books.</p>
 <ul>
   <li><b>When data is sent:</b> only when the developer starts one of these tasks.</li>
   <li><b>What is sent:</b> only the QuickBooks records the task needs, such as transaction details, account names, and amounts. OAuth tokens and app credentials are never sent.</li>
-  <li><b>Review:</b> AI output is shown to the developer for review before any change is written back to QuickBooks.</li>
+  <li><b>Review:</b> AI output is only a suggestion. A suggested change reaches QuickBooks only after the developer approves it, as described under Human review of every change.</li>
   <li><b>No training:</b> Pennywise does not use QuickBooks data to train or fine-tune any AI model.</li>
   <li><b>Provider terms:</b> Anthropic processes data sent to the Claude API under its own <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> and <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>.</li>
 </ul>
