@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect Pennywise</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --link:#0969da; --code:#f6f8fa; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --link:#4493f8; --code:#151b23; } }
+  body { background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  a { color:var(--link); } .meta { color:var(--muted); }
+  code { background:var(--code); padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+<h1>Connect or reconnect Pennywise to QuickBooks</h1>
+<p>Pennywise connects to QuickBooks Online from the developer's own computer using Intuit's OAuth 2.0 sign-in. Reconnecting works the same way as connecting for the first time. Use it if the connection was removed, the tokens expired, or Pennywise reports an authorization error.</p>
+<ol>
+  <li>On the computer running Pennywise, open a terminal in the Pennywise folder.</li>
+  <li>Run <code>npm.cmd run auth</code>.</li>
+  <li>Open <a href="http://localhost:8000/connect">http://localhost:8000/connect</a>, sign in to Intuit, and choose the company to connect.</li>
+</ol>
+<p>When the page shows "Connected," new tokens have been saved on that computer and you can stop the local server.</p>
+<p class="meta"><a href="./">Pennywise legal and support pages</a></p>
+</body>
+</html>

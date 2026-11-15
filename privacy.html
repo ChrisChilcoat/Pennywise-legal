@@ -30,16 +30,26 @@
 <h2>How it is used</h2>
 <p>Data is used only to show and manage the developer's own bookkeeping. Pennywise does not use the data for advertising, profiling, or any purpose unrelated to that bookkeeping.</p>
 
+<h2 id="ai">AI processing</h2>
+<p>Pennywise uses a generative AI model, <b>Anthropic's Claude</b>, accessed through the Claude API, to help with bookkeeping tasks. These tasks include categorizing transactions, summarizing accounting data, and answering questions about the developer's own books.</p>
+<ul>
+  <li><b>When data is sent:</b> only when the developer starts one of these tasks.</li>
+  <li><b>What is sent:</b> only the QuickBooks records the task needs, such as transaction details, account names, and amounts. OAuth tokens and app credentials are never sent.</li>
+  <li><b>Review:</b> AI output is shown to the developer for review before any change is written back to QuickBooks.</li>
+  <li><b>No training:</b> Pennywise does not use QuickBooks data to train or fine-tune any AI model.</li>
+  <li><b>Provider terms:</b> Anthropic processes data sent to the Claude API under its own <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> and <a href="https://www.anthropic.com/legal/privacy">Privacy Policy</a>.</li>
+</ul>
+
 <h2>Storage and security</h2>
 <ul>
   <li>Pennywise runs on the developer's own computer. OAuth access and refresh tokens are stored locally and are never committed to source control.</li>
   <li>The app's client secret is loaded from a local environment variable and is never published.</li>
-  <li>QuickBooks data is retrieved on demand and is not copied to any external server or database operated by Pennywise.</li>
+  <li>QuickBooks data is retrieved on demand. It is not copied to any external server or database operated by Pennywise. The only exception is the per-task requests to the Claude API described above.</li>
 </ul>
 
 <h2>Sharing</h2>
-<p>Pennywise does not sell, rent, or share QuickBooks data or personal information with third parties. Data passes only between the developer's computer and Intuit's services.</p>
-<p>If Pennywise is later changed to send QuickBooks data to another service, such as an AI model provider, this policy will be updated to name that service before the change is made.</p>
+<p>Pennywise does not sell or rent QuickBooks data or personal information. Data passes only between the developer's computer, Intuit's services, and Anthropic's Claude API as described under <a href="#ai">AI processing</a>.</p>
+<p>If Pennywise is later changed to send QuickBooks data to any other service, this policy will be updated to name that service before the change is made.</p>
 
 <h2>Retention and deletion</h2>
 <p>Tokens are kept until access is revoked or they expire. To end access at any time, disconnect Pennywise from the QuickBooks company's connected apps settings, or delete the locally stored token file. Either action stops all further data access.</p>
